@@ -1,8 +1,6 @@
 # 🔮 ¡La API de los Sueños y la Fortuna! 🔮
 
-**[🚀 ¿Qué Hace Esta API?](#-qué-hace-esta-api) | [🎮 Cómo Usarla](#-cómo-usarla) | [🧑‍💻 Cómo Colaborar](#-cómo-colaborar)**
-
----
+[📥 **Descargar solo este proyecto »**](https://downgit.github.io/#/home?url=https://github.com/orbaf/orbaf-public/tree/main/src/node/orbaf/quiniela)
 
 ## 🚀 ¿Qué Hace Esta API?
 
@@ -16,8 +14,6 @@ Esta API es tu oráculo personal. Traduce tus sueños a números de la suerte o 
 🧠 **Intérprete de Sueños:** ¿Tienes un número en mente? Te decimos qué sueño representa.
 🌎 **Soporte Multi-idioma:** Funciona en Español (`es`) e Inglés (`en`).
 🤖 **Integración con n8n:** ¡Lista para automatizar tus corazonadas y probar la API sin código!
-
----
 
 ## 🎮 Cómo Usarla: Guía de Consumo
 
@@ -95,7 +91,7 @@ GET http://localhost:3000/
 
 ### 🤖 Integración Mágica con n8n
 
-Puedes probar toda esta API directamente en **n8n** sin escribir una sola línea de código. Hemos preparado un flujo de trabajo listo para importar con una suite de pruebas completa.
+Puedes probar toda esta API directamente en **n8n** sin escribir una sola línea de código. Se ha preparado un flujo de trabajo listo para importar con una suite de pruebas completa.
 
 **¿Cómo importarlo?**
 
@@ -103,29 +99,26 @@ Puedes probar toda esta API directamente en **n8n** sin escribir una sola línea
 2. Ve a tu lienzo de n8n y simplemente presiona `Ctrl + V` (o `Cmd + V` en Mac).
 3. ¡Listo! Los nodos aparecerán en tu pantalla, listos para que los explores y ejecutes.
 
-> Para más detalles sobre cómo usar los nodos HTTP en n8n, puedes consultar la [documentación oficial de n8n](https://docs.n8n.io/courses/level-one/chapter-6/).
+> Para más detalles sobre cómo usar los nodos HTTP en n8n, puedes consultar la [documentación oficial de n8n](https://docs.n8n.io/nodes/core-nodes/http-request/).
 
 ### 📖 Documentación Interactiva de la API (Swagger)
 
-Para una referencia completa y la posibilidad de probar la API directamente desde tu navegador, hemos incluido documentación interactiva con Swagger.
+Para una referencia completa y la posibilidad de probar la API directamente desde tu navegador, se incluye documentación interactiva con Swagger.
 
 Una vez que el servidor esté corriendo, puedes acceder a ella en la siguiente URL:
-
 [http://localhost:3000/docs](http://localhost:3000/docs)
 
 Desde allí, podrás ver todos los endpoints, sus parámetros y respuestas esperadas.
 
 ---
 
-## 🧑‍💻 Cómo Colaborar: ¡Anímate a Jugar!
+## ⚙️ Bajo el Capó: Arquitectura y Ejecución Local
 
-Este proyecto es parte de un "patio de juegos" de software. Es un espacio para experimentar, aprender y romper cosas sin miedo. Si tienes una idea, ¡adelante!
+Esta sección documenta las decisiones de ingeniería detrás del proyecto y cómo puedes ejecutarlo en tu propia máquina para probarlo y explorarlo.
 
-### La Arquitectura del Castillo 🏰
+### Arquitectura del Proyecto
 
-Para mantener el orden en nuestro patio de juegos, usamos una **Arquitectura Hexagonal** (también conocida como "Puertos y Adaptadores").
-
-**¿Por qué?** Porque nos permite mantener nuestra lógica de negocio (el "tesoro" del castillo 💎) a salvo y completamente independiente de tecnologías externas como el framework web o las bases de datos.
+Este proyecto utiliza una **Arquitectura Hexagonal** (también conocida como "Puertos y Adaptadores") para separar claramente la lógica de negocio de las dependencias externas, como el framework web o el acceso a datos.
 
 ```mermaid
 graph LR
@@ -162,12 +155,12 @@ graph LR
 | `src/application`    | **Aplicación (Los Guardianes)**         | Orquesta los casos de uso y define los "puertos" (interfaces/contratos) que el núcleo necesita para comunicarse con el exterior. |
 | `src/infrastructure` | **Infraestructura (El Mundo Exterior)** | Implementa los "adaptadores". Aquí viven Express, el lector de JSON, y cualquier otra tecnología que interactúe con el núcleo.   |
 
-### ¡Manos a la Obra!
+### Guía de Instalación Local
 
-1. **Clona el repositorio.**
+1. **Clona el repositorio principal.**
 2. **Navega a la carpeta del proyecto:** `cd src/node/orbaf/quiniela`
 3. **Instala las dependencias:** `yarn install`
 4. **Inicia el servidor de desarrollo:** `yarn dev`
 5. **Ejecuta los tests:** `yarn test`
 
-¡Y eso es todo! Siéntete libre de añadir nuevas funcionalidades, proponer cambios o simplemente... jugar.
+Ahora tienes el proyecto corriendo en tu máquina local para probarlo y explorarlo.
