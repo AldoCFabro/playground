@@ -1,48 +1,38 @@
-# 🏖️ Patio de Juego en Software
+# 🧪 El Laboratorio de Código de Orbaf
 
-¡Bienvenidos al patio de juego de software!  
-Acá se cocinan ideas, prototipos, experimentos, proyectos que capaz nunca lleguen a producción (y está bien que así sea).
+¡Bienvenido a mi laboratorio personal! Este es el lugar donde las ideas cobran vida, los prototipos nacen y los experimentos de software toman forma. No todo lo que aquí se crea está destinado a producción, pero cada proyecto es una exploración de nuevas tecnologías, arquitecturas y conceptos.
 
-## 🚦 ¿Qué es esto?
+## 🔭 Explora los Experimentos
 
-Un espacio abierto donde:
+Cada experimento está organizado por lenguaje y luego por proyecto. Eres libre de navegar, descargar y usar cualquier cosa que encuentres aquí.
 
-- Tiramos código sin miedo al fracaso.
-- Creamos MVPs, pruebas de concepto, y proyectos que quizás no vean la luz del deploy.
-- Aprendemos, rompemos, probamos y (a veces) documentamos.
+La estructura general es:
 
-## 📁 Estructura del repo
-
-- `/proyectos/`: Cada subcarpeta es una idea, un intento, o un “qué pasa si…”
-- `/experimentos/`: Pruebas rápidas, prototipos, código random.
-- `/archivados/`: Proyectos que ya dimos por muertos, pero nos da pena borrar.
-- `/docs/`: Algún que otro apunte o explicación para no perdernos del todo.
-
-## 📋 ¿Cómo participar?
-
-1. Crea una carpeta con el nombre de tu proyecto/experimento.
-2. Agregá un README propio explicando la locura.
-3. Subí tu código, sin miedo.
-4. Si todo sale mal, celebramos igual.
-
-## 🚨 Disclaimer
-
-Nada de lo que está acá tiene garantía de funcionar.  
-Si algo llega a producción, es pura coincidencia.
-
-## 🎉 Código de conducta
-
-Buena onda, respeto y humor. Acá venimos a experimentar y aprender, no a juzgar.  
-¡Sumate, que el deploy nunca llegue!
+```
+src/
+└── <lenguaje>/
+    └── <tu_alias>/
+        └── <tu_experimento>/
+            └── README.md  <-- ¡Detalles del proyecto aquí!
+```
 
 ---
 
-## 📝 Glosario rápido
+### 🧪 Proyectos en Node.js
 
-- **MVP** (Minimum Viable Product):  
-  La versión más simple de una idea, app o funcionalidad. Solo lo mínimo para ver si tiene sentido, si funciona, o si merece seguir desarrollándose.  
-  *En criollo:* “Lo hacemos rápido, básico y vemos qué onda. Si gusta, seguimos. Si no, a otra cosa.”
+#### 🔮 **Quiniela API**
+
+- **Descripción:** Una API lúdica que interpreta sueños y genera números de la suerte, construida con una Arquitectura Hexagonal para máxima flexibilidad y testeabilidad.
+- **Tecnologías:** Node.js, Express, Jest, Supertest, Arquitectura Hexagonal.
+- **[Ver detalles y código en su README »](./src/node/orbaf/quiniela/README.md)**
+- **[📥 Descargar solo este proyecto »](https://downgit.github.io/#/home?url=https://github.com/orbaf/orbaf-public/tree/main/src/node/orbaf/quiniela)**
 
 ---
 
-*Hecho con café, memes y ganas de romper todo.*
+_... más experimentos próximamente ..._
+
+## 📜 Uso y Licencia
+
+El código de cada proyecto en este repositorio es de código abierto. Siéntete libre de clonar el repositorio, explorar los proyectos y usar el código para tus propias creaciones. Si encuentras algo útil, ¡genial! Ese es el objetivo.
+
+Todo el contenido se distribuye bajo la licencia MIT, a menos que un proyecto específico indique lo contrario.
